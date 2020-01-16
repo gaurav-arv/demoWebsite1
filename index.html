@@ -88,7 +88,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- /header -->
 	<scirpt>
-		document.getElementById("signUp1").onclick(){
+		document.getElementById("signUp1").onclick=function(){
 		dataLayer.push({
 			'event':'Click',
 			'eventCategory':' Subscription' ,
@@ -96,7 +96,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			'eventLabel': 'Sign Up'
 			})
 		}
-		document.getElementById("logo1").onclick(){
+		document.getElementById("logo1").onclick=function(){
 			dataLayer.push({
 			'event':'Click',
 			'eventCategory':'Navigation Click',
@@ -598,7 +598,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <!-- end footer-main -->
 <script>
-		document.getElementById('email1').onclick(){
+		document.getElementById('email1').onclick=function(){
 			dataLayer.push({
 				'event': 'onclick ',
 				'eventCategory': 'subscribtion',
