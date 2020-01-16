@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <header id="header" class="row">
 
         <div class="header-logo">
-            <a href="index.html" id="logo1">Dazzle</a>
+            <a href="index.html" id="logo1" onclick="headerClick();">Dazzle</a>
         </div>
 
         <nav id="header-nav-wrap">
@@ -79,7 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li id="dwd"><a class="smoothscroll" href="#download" title="download">Download</a></li>
             </ul>
 
-            <a href="#" title="sign-up" class="button button-primary cta" id="signUp1">Sign Up</a>
+            <a href="#" title="sign-up" class="button button-primary cta" id="signUp1" function="signUpClick();">Sign Up</a>
         </nav>
 
         <a class="header-menu-toggle" href="#"><span>Menu</span></a>
@@ -88,7 +88,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- /header -->
 	<scirpt>
-		document.getElementById("signUp1").onclick=function(){
+		function signUpClick(){
 		dataLayer.push({
 			'event':'Click',
 			'eventCategory':' Subscription' ,
@@ -96,7 +96,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			'eventLabel': 'Sign Up'
 			})
 		}
-		document.getElementById("logo1").onclick=function(){
+		function headerClick(){
 			dataLayer.push({
 			'event':'Click',
 			'eventCategory':'Navigation Click',
@@ -582,7 +582,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                             <input type="email" value="" id="email1" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
 
-                            <input type="submit" name="subscribe" value="Send">
+                            <input type="submit" name="subscribe" value="Send" onclick="emailClick()">
 
                             <label for="mc-email" class="subscribe-message"></label>
 
@@ -598,7 +598,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <!-- end footer-main -->
 <script>
-		document.getElementById('email1').onclick=function(){
+		function emailClick(){
 			dataLayer.push({
 				'event': 'onclick ',
 				'eventCategory': 'subscribtion',
