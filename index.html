@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <header id="header" class="row">
 
         <div class="header-logo">
-            <a href="index.html">Dazzle</a>
+            <a href="index.html" id="logo1">Dazzle</a>
         </div>
 
         <nav id="header-nav-wrap">
@@ -79,7 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li id="dwd"><a class="smoothscroll" href="#download" title="download">Download</a></li>
             </ul>
 
-            <a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>
+            <a href="#" title="sign-up" class="button button-primary cta" id="signUp1">Sign Up</a>
         </nav>
 
         <a class="header-menu-toggle" href="#"><span>Menu</span></a>
@@ -87,7 +87,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </header>
 
     <!-- /header -->
-
+	<scirpt>
+		document.getElementById("signUp1").onclick(){
+		dataLayer.push({
+			'event':'Click',
+			'eventCategory':' Subscription' ,
+			'eventAction': 'onclick'
+			'eventLabel': 'Sign Up'
+			})
+		}
+		document.getElementById("logo1").onclick(){
+			dataLayer.push({
+			'event':'Click',
+			'eventCategory':'Navigation Click',
+			'eventAction':'onclick',
+			'eventLabel':' Logo Click'
+		})
+		}
+	</script>
 
     <!-- home
    ================================================== -->
@@ -563,7 +580,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                         <form id="mc-form" class="group" novalidate="true">
 
-                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                            <input type="email" value="" id="email1" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
 
                             <input type="submit" name="subscribe" value="Send">
 
@@ -580,7 +597,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- /row -->
         </div>
         <!-- end footer-main -->
-
+<script>
+		document.getElementById('email1').onclick(){
+			dataLayer.push({
+				'event': 'onclick ',
+				'eventCategory': 'subscribtion',
+				'eventAction': 'onclick',
+				'eventLabel': 'Email Subscribed'
+			})
+		}	    
+	    
+</script>
 
         <div class="footer-bottom">
 
@@ -617,3 +644,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </body>
 
 </html>
+<!--- 81
