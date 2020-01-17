@@ -104,6 +104,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			'eventLabel':'Home Page'
 		})
 		}
+		function getName(id){
+           	let labelget = document.getElementById(id).innerText;
+            	console.log(labelget)
+            	dataLayer.push({
+                	'event':'Navigation',
+                	'eventCategory':'Navigation Menu',
+                	'eventAction':'click',
+                	'eventLabel': 'Home Page'
+
+            })
+        }
 	</script>
 
     <!-- home
