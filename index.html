@@ -59,6 +59,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             cookieDomain: 'auto'
         });
         ga('send', 'pageview', window.location.href.split(/[?#]/)[0]);
+	    var _customTask = function() {
+  
+  return function(customTaskModel) {
+    customTaskModel.set('dimension3', customTaskModel.get('clientId'));
+  };
+};	
+ga('create','UA-156364156-2');
+ga('set', 'customTask', _customTask());
+ga('send', 'session')
     </script>
 </head>
 
